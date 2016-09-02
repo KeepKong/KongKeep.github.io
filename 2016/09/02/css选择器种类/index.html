@@ -153,30 +153,42 @@
 <li>相邻兄弟选择器</li>
 <li>属性选择器</li>
 </ol>
-<p>##标签选择器<br>如果存在<code>&lt;div&gt;&lt;/div&gt;</code>的标签，可以通过在<code>&lt;style&gt;&lt;/style&gt;</code>中通过<code>div{}</code>设置这个标签的属性。  </p>
-<p>##类选择器<br>如果存在<code>&lt;div class=&quot;haha&quot;&gt;&lt;/div&gt;</code> 可以通过<code>.haha{}</code>来设置这个标签的属性。  </p>
-<p>##id选择器<br>如果存在<code>&lt;div id=&quot;haha&quot;&gt;&lt;/div&gt;</code> 可以通过 <code>#haha{}</code>来设置这个标签的属性。  </p>
-<p>##并列选择器<br>如果存在<code>&lt;div id=&quot;haha&quot; class=&quot;nihao&quot;&gt;&lt;/div&gt;</code>可以通过<code>div,#haha,.nihao{}</code>这个方式来设置这个标签的属性。  </p>
-<p>##复合选择器<br>如果存在<code>&lt;div id=&quot;haha&quot; class=&quot;nihao&quot;&gt;&lt;/div&gt;</code>可以通过<code>div.nihao{}</code>来设置这个标签的属性。    </p>
-<p>####注意事项<br>这里的<code>div和nihao</code>之间是不能有空格的而且第一个标签必须是标签选择器。  </p>
-<p>##后代选择器<br>如果存在这样的情况，那么就可以通过<code>div p</code>直接拿到<code>div</code>后代中的所有p标签，也就是那两个p标签，如果我这样<code>div span p</code>就可以直接拿到span后代的那个p标签。</p>
+<p>##标签选择器  </p>
+<p>如果存在<code>&lt;div&gt;&lt;/div&gt;</code>的标签，可以通过在<code>&lt;style&gt;&lt;/style&gt;</code>中通过<code>div{}</code>设置这个标签的属性。  </p>
+<p>##类选择器</p>
+<p>如果存在<code>&lt;div class=&quot;haha&quot;&gt;&lt;/div&gt;</code> 可以通过<code>.haha{}</code>来设置这个标签的属性。  </p>
+<p>##id选择器</p>
+<p>如果存在<code>&lt;div id=&quot;haha&quot;&gt;&lt;/div&gt;</code> 可以通过 <code>#haha{}</code>来设置这个标签的属性。  </p>
+<p>##并列选择器</p>
+<p>如果存在 <code>&lt;div id=&quot;haha&quot; class=&quot;nihao&quot;&gt;&lt;/div&gt;</code> 可以通过<code>div,#haha,.nihao{}</code>这个方式来设置这个标签的属性。  </p>
+<p>##复合选择器</p>
+<p>如果存在<code>&lt;div id=&quot;haha&quot; class=&quot;nihao&quot;&gt;&lt;/div&gt;</code>可以通过<code>div.nihao{}</code>来设置这个标签的属性。    </p>
+<p>####注意事项  </p>
+<p>这里的<code>div和nihao</code>之间是不能有空格的而且第一个标签必须是标签选择器。  </p>
+<p>##后代选择器</p>
+<p>如果存在这样的情况，那么就可以通过<code>div p</code>直接拿到<code>div</code>后代中的所有p标签，也就是那两个p标签，如果我这样<code>div span p</code>就可以直接拿到span后代的那个p标签。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;span&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>####注意事项</p>
 <ol>
 <li>在div p之间必须有一个空格（一个以上的空格好像不行，本人还没有测试）  </li>
-<li></li>
 </ol>
-<p>##直接后代选择器<br>如果存在如下情况,那么可以使用<code>div&gt;p</code>直接拿到p标签，但是这个是直接后代，所以不会拿到span下面的p标签。 </p>
+<p>##直接后代选择器</p>
+<p>如果存在如下情况,那么可以使用<code>div&gt;p</code>直接拿到p标签，但是这个是直接后代，所以不会拿到span下面的p标签。 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line"> 	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;span&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>##相邻兄弟选择器<br>如果存在这种情况，那么可以用<code>div + p{}</code>相邻兄弟选择器拿到<code>div</code>标签的相邻标签<code>p</code>标签，然后设置它的属性。  </p>
+<p>##相邻兄弟选择器</p>
+<p>如果存在这种情况，那么可以用<code>div + p{}</code>相邻兄弟选择器拿到<code>div</code>标签的相邻标签<code>p</code>标签，然后设置它的属性。  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line"> 	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;span&gt;</div><div class="line">	&lt;p&gt;&lt;/p&gt;</div><div class="line">&lt;/span&gt;</div><div class="line">&lt;/di&gt;</div><div class="line"></div><div class="line">&lt;p&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
-<p>##属性选择器<br>如果存在如下情况,那么就可以通过<code>div[name]{}</code>拿到带有name属性的标签。也可以使用<code>div[name][class]{}</code>设置属性中有name,class的标签，并设置属性。还可以使用<code>class=person</code>单独选择出某一个标签。</p>
+<p>##属性选择器</p>
+<p>如果存在如下情况,那么就可以通过<code>div[name]{}</code>拿到带有name属性的标签。也可以使用<code>div[name][class]{}</code>设置属性中有name,class的标签，并设置属性。还可以使用<code>class=person</code>单独选择出某一个标签。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div name=&quot;jack&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;div name=&quot;rose&quot;&gt; &lt;/div&gt;</div><div class="line">&lt;div name=&quot;lily&quot; class=&quot;person&quot;&gt; &lt;/div&gt;</div></pre></td></tr></table></figure>
 <hr>
-<p>#伪类的学习<br>主要使用hover和foucs</p>
-<p>####hover:<br>    当鼠标悬浮到元素上方是，添加样式</p>
-<p>####foucs:<br>    向拥有键盘输入焦点的元素添加样式</p>
-<p>伪类是在css的样式设置中使用的，例如<code>div:hover{}</code>，其中:和div之间不能有空格，必须紧挨着，然后:和hover之间也不能有空格。其余的可以参考w3cSchool网站。</p>
+<p>#伪类的学习</p>
+<p>主要使用hover和foucs</p>
+<p>####hover:</p>
+<pre><code>当鼠标悬浮到元素上方是，添加样式
+</code></pre><p>####foucs:</p>
+<pre><code>向拥有键盘输入焦点的元素添加样式
+</code></pre><p>伪类是在css的样式设置中使用的，例如<code>div:hover{}</code>，其中:和div之间不能有空格，必须紧挨着，然后:和hover之间也不能有空格。其余的可以参考w3cSchool网站。</p>
 
   </section>
 
