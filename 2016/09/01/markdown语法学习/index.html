@@ -181,7 +181,7 @@ sfdaklj
 <blockquote>
 <p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  </p>
 </blockquote>
-<p>代码区块的使用</p>
+<p>代码区块的使用(首行向右缩进4个空格或者一个制表符)</p>
 <pre><code>- (void)setVideoModelMuArr:(NSMutableArray *)videoModelMuArr
 {
 
@@ -191,7 +191,8 @@ sfdaklj
     }
 
 
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), 
+    ^{
 
 
         [self.tableView reloadData];
@@ -207,7 +208,7 @@ end tell
 <p> 为什么出现这种情况呢？<br>带颜色的区块使用</p>
 <p><code>$ haha test</code>  </p>
 <hr>
-<p>链接<br><a href="https://www.baidu.com/" target="_blank" rel="external">百度</a></p>
+<p>链接<br><a href="https://baidu.com/" target="_blank" rel="external">百度</a>inline link</p>
 <hr>
 
   </section>
