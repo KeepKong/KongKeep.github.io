@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>KongKeep | 做好现在 不惧未来</title>
+    <title>markdown语法学习 | KongKeep</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="iOS小白一枚 坚持就是捷径">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="KongKeep | 做好现在 不惧未来">
+    <meta name="twitter:title" content="markdown语法学习 | KongKeep">
     <meta name="twitter:description" content="iOS小白一枚 坚持就是捷径">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="KongKeep | 做好现在 不惧未来">
+    <meta property="og:title" content="markdown语法学习 | KongKeep">
     <meta property="og:description" content="iOS小白一枚 坚持就是捷径">
 
     
@@ -33,7 +33,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="https://yoursite.com"/>
+    <link rel="canonical" href="https://yoursite.com/2016/09/01/markdown语法学习/"/>
 
     
       
@@ -128,24 +128,29 @@
 
     <div class="content-wrapper">
         <div class="content-wrapper__inner">
-            <div class="main-post-list">
-    
-  <ol class="post-list">
-  
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/09/01/markdown语法学习/" title="link to post.title">markdown语法学习</a></h2>
-      <p class="excerpt">
-    
-      
-导读
-啊哈
-哈哈发货
-发简历到空间
+            <article class="post-container post-container--single">
 
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-09-01T08:22:16.000Z" class="post-list__meta--date date">2016-09-01</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title">markdown语法学习</h1>
+  </header>
 
-
-***
+  <section class="post">
+    <ul>
+<li>导读<ol>
+<li>啊哈</li>
+<li>哈哈发货</li>
+<li>发简历到空间</li>
+</ol>
+</li>
+</ul>
+<pre><code>***
 
 斜体样式
 *就离开的发掘*
@@ -154,45 +159,83 @@
 加粗样式
 **激烈的卡萨飞机**
 ***
-&amp;gt; 
+&gt; 
 ***
 
 哈哈回复撒发生了
 ***
 - 使用HTML的标签来编辑
-&amp;lt;table&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;hahhah&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;hahhah&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
 ***
-&amp;lt;&amp;amp;k
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-09-01T08:22:16.000Z" class="post-list__meta--date date">2016-09-01</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/01/markdown语法学习/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
+&lt;&amp;kjfl
+AT&amp;T 4&lt;5  
+想要换行的话就在后面先加2个空格，然后在换行  
+sfdaklj
+
+---
+</code></pre><p>区块引用 (可以嵌套引用)</p>
+<blockquote>
+<p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  </p>
+</blockquote>
+<p>代码区块的使用</p>
+<pre><code>- (void)setVideoModelMuArr:(NSMutableArray *)videoModelMuArr
+{
+
+    if (_videoModelMuArr != videoModelMuArr)
+    {
+        _videoModelMuArr = videoModelMuArr;
+    }
+
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+
+        [self.tableView reloadData];
+
+    });
+
+} 
+
+tell application &quot;Foo&quot;
+    beep
+end tell
+</code></pre><hr>
+<p>带颜色的区块使用</p>
+<p><code>$ haha test</code>  </p>
+<hr>
+<p>链接<br><a href="https:www.baidu.com" target="_blank" rel="external">百度</a></p>
+<hr>
+
+  </section>
+
+</article>
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2016/08/13/hello-world/" title="Hello World">Hello World</a></h2>
+                <p class="excerpt">
+                
+                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2016-08-13T12:34:32.000Z" class="post-list__meta--date date">2016-08-13</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/13/hello-world/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
   
-    
-    <li>
-      <h2 class="post-list__post-title post-title"><a href="/2016/08/13/hello-world/" title="link to post.title">Hello World</a></h2>
-      <p class="excerpt">
-    
-      Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
-    &hellip;
-      </p>
-      <div class="post-list__meta"><time datetime="2016-08-13T12:34:32.000Z" class="post-list__meta--date date">2016-08-13</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/13/hello-world/">继续阅读</a></div>
-      <hr class="post-list__divider" />
-    </li>
-  
-    
-  </ol>
-
-
-
-</div>
-
+</section>
 
             
             <footer class="footer">
