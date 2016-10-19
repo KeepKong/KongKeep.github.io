@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     
-    <title>Hello World | KongKeep</title>
+    <title>KongKeep | 做好现在 不惧未来</title>
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -15,11 +15,11 @@
     <meta name="description" content="iOS小白一枚 坚持就是捷径">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Hello World | KongKeep">
+    <meta name="twitter:title" content="KongKeep | 做好现在 不惧未来">
     <meta name="twitter:description" content="iOS小白一枚 坚持就是捷径">
 
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello World | KongKeep">
+    <meta property="og:title" content="KongKeep | 做好现在 不惧未来">
     <meta property="og:description" content="iOS小白一枚 坚持就是捷径">
 
     
@@ -33,7 +33,7 @@
     <meta name="generator" content="hexo"/>
     
 
-    <link rel="canonical" href="https://yoursite.com/2016/08/13/hello-world/"/>
+    <link rel="canonical" href="https://yoursite.com/2016/09/01/关于svn学习总结/"/>
 
     
       
@@ -132,25 +132,37 @@
 
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2016-08-13T12:34:32.000Z" class="post-list__meta--date date">2016-08-13</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <time datetime="2016-09-01T08:03:35.000Z" class="post-list__meta--date date">2016-09-01</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
       <span class="page-pv">
       &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
       </span> 
    
     </div>
-    <h1 class="post-title">Hello World</h1>
+    <h1 class="post-title"></h1>
   </header>
 
   <section class="post">
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <h1 id="关于SVN学习总结"><a href="#关于SVN学习总结" class="headerlink" title="关于SVN学习总结"></a>关于SVN学习总结</h1><p>从服务器上checkout代码时应该用指令<code>svn checkout 服务器地址 --username=* --passward=*</code>。</p>
+<p>主要使用的指令为：<code>checkout</code> <code>update</code> <code>svn add .</code> <code>svn commit</code></p>
+<p><strong>目前XCode对svn的支持已经很好了，所以我们在创建或者修改了项目之后，XCode已经默认将我们创建和修改的文件进行<code>svn add *</code>了，已经添加到svn的管理之下了，所以可以直接用XCode进行commit</strong></p>
+<p>###版本回退步骤</p>
+<ul>
+<li>svn update -r6:先回退到某个版本，看是不是自己想要的那个版本。</li>
+<li>然后使用<code>svn update</code>更新到最新的版本(这里假设最新的版本是7)</li>
+<li>使用<code>svn merge -r7:6 person.h</code>(对person.h进行版本的混合)<br>这样以后本地的版本就不低于服务器的版本了，而且本地的文件的内容也回退到了版本6的内容，但是修改好的文件只是在本地的，所以还需要<code>snv commit</code>提交到服务器中就OK了。</li>
+</ul>
+<p>###out of date的原因</p>
+<ul>
+<li><p>本地版本低于服务器版本，也就是说别人已经提交最新的版本到服务器，而你并没有更新到最新的版本。（这里我只知道如果两个开发者修改同一个文件，一个开发者先将自己的修改后的文件提交了，然后另一个开发者不知道，也使用了commit 就会出现out of date ，这个时候最好使用postpone来解决冲突，但是我还有一个问题：如果有一个开发者修改了其他的文件，他提交了最新的版本，那么此时服务器的版本应该高于另一位开发者的本地版本的，如果另一位开发者也修改了其他的文件(这两个人修改的文件不同)，然后进行提交，这个时候会不会出现out of date这个问题呢?）：</p>
+<p>  <code>这个时候应该不会出现这个问题了，因为再使用update的时候应该会将第一位提交的开发者的文件下载到本地，而我自己修改和添加的其他文件不会消失，那也就是说只要更新的文件和我自己修改的文件不是同一个，那么就不会有冲突，然后在update之后在进行提交就可以了。</code></p>
+</li>
+</ul>
+<p>###在使用xcode向svn库中进行提交注意事项</p>
+<ul>
+<li>如果项目中有使用静态库，那么这个静态库用xcode提交会被忽略，必须用命令行进行提交。</li>
+<li>在项目过程中尽量使用xib，因为xib基本都是一个人进行开发的，在提交和更新代码的时候可以减少冲突的发生。</li>
+<li>如果在项目中使用了storyBoard，那么尽量保证只有一个人在使用storyBoard，否则，如果出现冲突，这个冲突没有那么容易解决。</li>
+</ul>
 
   </section>
 
@@ -161,19 +173,31 @@
                
             <div class="read-more-item">
                 <span class="read-more-item-dim">最近的文章</span>
-                <h2 class="post-list__post-title post-title"><a href="/2016/09/01/关于svn学习总结/" title=""></a></h2>
+                <h2 class="post-list__post-title post-title"><a href="/2016/09/01/关于git学习总结/" title=""></a></h2>
                 <p class="excerpt">
                 
-                关于SVN学习总结从服务器上checkout代码时应该用指令svn checkout 服务器地址 --username=* --passward=*。
-主要使用的指令为：checkout update svn add . svn commit
-目前XCode对svn的支持已经很好了，所以我们在创建或
+                #关于git学习总结###1. git和svn最大的区别 ：    这两者最大的区别在于svn的结构是集中式管理结构，而git的结构是分布是管理结构。
+其次是git多了一个本地版本库，我们在写好代码之后通过commit命令是提交至本地的版本库，然后再通过PUSH命令将本地的版本库提交至共享版本库。
+
                 &hellip;
                 </p>
-                <div class="post-list__meta"><time datetime="2016-09-01T08:03:35.000Z" class="post-list__meta--date date">2016-09-01</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/01/关于svn学习总结/">继续阅读</a></div>
+                <div class="post-list__meta"><time datetime="2016-09-01T08:03:35.000Z" class="post-list__meta--date date">2016-09-01</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/01/关于git学习总结/">继续阅读</a></div>
                            
             </div>
         
         
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2016/08/13/hello-world/" title="Hello World">Hello World</a></h2>
+                <p class="excerpt">
+                
+                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2016-08-13T12:34:32.000Z" class="post-list__meta--date date">2016-08-13</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/08/13/hello-world/">继续阅读</a></div>
+                       
+            </div>
         
      
    

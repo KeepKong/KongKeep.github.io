@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>KongKeep | 做好现在 不惧未来</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="iOS小白一枚 坚持就是捷径">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="KongKeep | 做好现在 不惧未来">
+    <meta name="twitter:description" content="iOS小白一枚 坚持就是捷径">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="KongKeep | 做好现在 不惧未来">
+    <meta property="og:description" content="iOS小白一枚 坚持就是捷径">
+
+    
+    <meta name="author" content="林守哲">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="https://yoursite.com/2016/09/11/App上架流程--林守哲/"/>
+
+    
+      
+</head>
+
+<body class="home-template no-js">
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 KongKeep 的主页"><img src="/images/icon.jpg" width="80" alt="KongKeep logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for KongKeep">KongKeep</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">做好现在 不惧未来</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">iOS小白一枚 坚持就是捷径</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/favourite">小世界</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/KongKeep" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/KongKeep" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-09-11T11:11:11.000Z" class="post-list__meta--date date">2016-09-11</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title"></h1>
+  </header>
+
+  <section class="post">
+    <h2 id="APP上架流程"><a href="#APP上架流程" class="headerlink" title="#APP上架流程"></a>#APP上架流程</h2><blockquote>
+<p>KeepKong Write</p>
+</blockquote>
+<p>##这个应该是比较新的上架流程，都是自己从网站上参考下来的，自己不好弄这个，所以就参考了别人写的，虽然里面有些步骤不是很明白，不过为了以后自己遇到能够有个参考，所以记下来。</p>
+<p>##一、在电脑上创建一个证书请求文件（签名证书）</p>
+<ol>
+<li>对准备好的项目设置好启动图片和应用程序图标，然后打开钥匙串访问（KEY CHAIN）<br> <img src="image/1.png" alt=""></li>
+<li>在钥匙串访问的证书助理中，选从证书颁发机构请求证书,然后开始添加信息。<br> <img src="image/2.png" alt=""><br> <img src="image/3.png" alt=""></li>
+<li><p>注意： </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1&gt; 电子邮件地址: 填写你申请开发者账号的电子邮件地址</div><div class="line">2&gt; 常用名称: 默认就好  </div><div class="line">3&gt; CA电子邮件地址: 空</div><div class="line">4&gt; 请求存储到磁盘(到时可以选择保存到桌面，方便找到使用)</div><div class="line">5&gt; 填写完毕之后下载</div></pre></td></tr></table></figure>
+</li>
+<li><p>点击继续，来到以下界面<br> <img src="image/4.png" alt="">  </p>
+</li>
+<li>点击存储，将请求文件保存到了桌面上<br> <img src="image/5.png" alt="">  </li>
+<li><p>此时，在桌面上就可以看到一个CertificateSigningRequest.certSigningRequest的证书请求文件（CSR文件）。  </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">注意： CSR文件尽量每个证书都制作一次，将常用名称区分开来，因为该常用名称是证书中的密钥的名字。</div></pre></td></tr></table></figure>
+</li>
+<li><p>双击CSR文件，安装签名证书<br> <img src="image/6.png" alt=""></p>
+</li>
+<li>点击继续，选择为您自己创建证书<br> <img src="image/7.png" alt=""></li>
+<li>再点击继续<br> <img src="image/8.png" alt=""></li>
+<li>点击创建，制作自签名根证书<br><img src="image/9.png" alt=""></li>
+<li>点击继续，证书成功创建<br><img src="image/10.png" alt=""><br>签名算法: 带 RSA加密的 SHA-256<br>公共密钥信息: RSA 加密，公共密钥256字节</li>
+</ol>
+<hr>
+<p>##二、制作发布证书<br>首先，需要具备以下条件:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">1&gt; 苹果的开发者账号</div><div class="line">2&gt; Mac操作系统</div><div class="line">3&gt; Xcode</div><div class="line">```  </div><div class="line"></div><div class="line">1. 进入[苹果开发者平台](http://developer.apple.com/)输入自己的开发者账号，登录，进入如下界面：</div><div class="line">	![](image/11.png)</div><div class="line">2. 点击Certificates,Identifiers&amp;Profiles，进入如下界面：</div><div class="line">	![](image/12.png)</div><div class="line">3. 点击右上角的加号按钮，然后选择 Production -&gt; App Store and Hoc</div><div class="line">	![](image/13.png)</div></pre></td></tr></table></figure>
+<pre><code>注意: 有的时候，我们会发现，不能选中 App Store and Ad Hoc
+</code></pre><p>这是因为一个 Production 中最多只能有两个 iOS Distribution 文件，删掉即可。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">	![](image/14.png)</div><div class="line">4.  点击Continue </div><div class="line">	![](image/15.png)</div><div class="line"></div><div class="line">5. 由于CSR文件已经创建好，直接点击Continue，然后上传 CSR 文件</div><div class="line">	![](image/16.png)</div><div class="line">6. 点击Continue，这个时候，发布证书已经制作完毕  </div><div class="line">	![](image/17.png)</div><div class="line">7. 点击Download，这时就有了一个 .cer 证书文件 `ios_distribution-8.cer</div><div class="line">	![](image/18.png)</div><div class="line">	![](image/19.png)</div><div class="line">8. 双击安装证书（如果安装不上，可以直接将证书文件拖拽到钥匙串访问的列表中）</div><div class="line">	![](image/20.png)</div><div class="line">---</div><div class="line"></div><div class="line">##三、制作Provisioning Profiles证书(简称PP证书)</div><div class="line">**到目前为止，上架所需要的证书还不齐全，想提交AppStore，还需要PP证书。**</div></pre></td></tr></table></figure></p>
+<p>1&gt; PP证书分为 开发用的PP证书 和 发布用的PP证书，这里我们制作的是 发布用的PP证书<br>2&gt; 制作 PP 证书，需要 App ID 和 发布证书(发布证书在上一步已经做好了)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1. 选择 App IDs</div><div class="line">	![](image/21.png)</div><div class="line">2. 然后点右上角的加号，创建一个新的 App ID</div><div class="line">	![](image/22.png)</div></pre></td></tr></table></figure></p>
+<pre><code>注意: 这里有两项需要我们自己填：
+</code></pre><p>1&gt; 第一项 ‘Name’，用来描述你的 ‘AppID’，这个随便填，没有什么限制，最好是项目名称，这样方便自己辨识（不允许包含中文）；<br>2&gt; 第二项 ‘Bundle ID (App ID Suffix)’，这是你 ‘App ID’的后缀，这个需要仔细填写。因为这个内容和你的程序直接相关，后面很多地方都要用到，最好是’com.yourcompany.yourappname’的格式，说白了，就是用项目中的Bundle ID（这样是最保险的）。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">3. 选择你的app中需要的服务</div><div class="line">	![](image/23.png)</div></pre></td></tr></table></figure></p>
+<pre><code>注意：
+</code></pre><p>1&gt; wildCard格式的证书没有推送，PassCard等服务的应用，慎重选择。<br>2&gt; 有一个区别，因为PP证书的开发者证书需要真机调试，所以我们需要绑定真机，如果没有的话，需要将真机的udid复制出来在此添加，在发布PP证书中，是没有这一步的。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">4. 点击Continue，进入如下界面</div><div class="line">	![](image/24.png)</div><div class="line">5. 确认 App ID信息，如果无误，点击 Register</div><div class="line">	![](image/25.png)</div><div class="line">6. 点击 Done，这时 App ID就申请成功了</div><div class="line">	![](image/26.png)</div><div class="line">7. 制作发布用的PP证书:点击 Provisioning Profiles，然后点击右上角的加号</div><div class="line">	![](image/27.png)</div><div class="line">8. 点击 Continue，如图，选择我们自己的 App ID  </div><div class="line">	![](image/28.png)</div><div class="line">9. 点击 Continue，选择发布证书</div><div class="line">	![](image/29.png)</div><div class="line">10. 点击Continue，如图，给PP证书起个名字</div><div class="line">	![](image/30.png)</div><div class="line">11. 点击Continue，如图，PP证书制作完毕</div><div class="line">	![](image/31.png)</div><div class="line">12. 点击Download 将PP证书下载下来，如图</div><div class="line">	![](image/32.png)</div><div class="line">13. 双击PP证书，将其添加到Xcode中</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">##四、配置项目环境</div><div class="line">1. Xcode -&gt; Preferences -&gt; Account，如图</div><div class="line">	![](image/33.png)</div></pre></td></tr></table></figure></p>
+<p>1&gt; 点击+可以选择Add Apple ID；<br>2&gt; 点击View Details可以查看该Apple Id下的Certificates和Provisioning Profile证书文件，在这里你可以点击下载。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">	![](image/34.png)</div><div class="line">2. 在项目Targets下的Identity中，Team选择对应的Apple ID 即可</div><div class="line">	![](image/35.png)</div><div class="line">3. 在Xcode的项目设置里，Provisioning Profile就可以选择对应的证书。</div><div class="line">	![](image/36.png)</div><div class="line">3. 到此为止，前期的准备工作就做完了。</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">##五、ipa打包</div><div class="line">1. Archive在线打包  </div><div class="line">在真机状态下选择 Product-&gt;Archive(如果不是真机状态下，Archive会是灰色不可用的)，成功会弹出如下图： </div><div class="line">	![](image/37.png)</div><div class="line">	![](image/38.png)</div></pre></td></tr></table></figure></p>
+<p>1&gt; Validate表示验证，Export表示导出<br>2&gt; 建议先点击Validate进行验证，验证的过程有点慢，但是为了审核顺利点，还是验证下为好。<br>3&gt; 验证成功后点击Export导出ipa的包用与上传即可。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">	![](image/39.png)</div><div class="line">	![](image/40.png)</div><div class="line">	</div><div class="line">	</div><div class="line">##六、ipa提交App Store</div><div class="line">1. 在 iTunes中创建程序  </div><div class="line">选择 iTunes Connect</div><div class="line">	![](image/41.png)</div><div class="line">	![](image/42.png)</div><div class="line">2. 进入 iTunes Connect 网页</div><div class="line">	![](image/43.png)</div><div class="line">3. 打开我的App，然后点击左上角的加号，新建 App</div><div class="line">	![](image/44.png)</div><div class="line">4. 弹出以下界面，设置 App信息</div><div class="line">	![](image/45.png)</div></pre></td></tr></table></figure></p>
+<p>1&gt; 名称：指的是App上架后，显示在App Store中的名称<br>2&gt; 主要语言: Simplified Chinese(简体中文)<br>3&gt; 套装ID: Test888-com.iOS.www.*<br>      就是之前申请的 App ID<br>4&gt; 套装ID后缀: Test888<br>      后缀就是Xcode中的 Bundle Identifier 最后一个点后面的内容(本例中是 Test888)<br>5&gt; SKU: 可以使用项目中的 Bundle Identifier<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">5. 点击创建</div><div class="line">	![](image/46.png)</div><div class="line">6. 价格与销售范围，根据app不同自己填写</div><div class="line">	![](image/47.png)</div><div class="line">7. 设置完App信息，点击准备提交，进入如下界面</div><div class="line">	![](image/48.png)</div><div class="line">8. 设置 App预览和屏幕快照</div><div class="line">	![](image/49.png)</div></pre></td></tr></table></figure></p>
+<p>注意:<br>1&gt; 这里需要不同屏幕的截图，可以直接用模拟器运行后截图。待模拟器运行开始的时候，按住cmd+S, 模拟器的屏幕截图就直接保存在桌面上了<br>2&gt; 每种尺寸的屏幕截图必须是在模拟器100%的比例下进行截取。否则会报错。<br>3&gt; 上传的时候会提示“无法载入文件”的问题。原因是：截图保存的文件名有中文，修改下截图名称即可！<br>4&gt; 屏幕尺寸大家都可以查到，为了自己方便，简单备注下：<br>   4.7英寸 -&gt; iPhone6/s   5.5英寸—&gt;iPhone 6/s Plus   4英寸 —&gt;iPhone5S   3.5英寸 —&gt; iPhone 4S<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">9. 设置 App描述和关键字</div><div class="line">	![](image/50.png)</div></pre></td></tr></table></figure></p>
+<p>1&gt; 描述: 对App进行简要介绍，让用户快速了解App的基本功能<br>2&gt; 关键字: 用户可以通过这些关键字找到App<br>3&gt; 技术支持网址<br>4&gt; 营销网址<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">10. 设置 App 综合信息</div><div class="line">	![](image/51.png)</div></pre></td></tr></table></figure></p>
+<p>注意:<br>1&gt; 上传App Icon的时候，需要上传1024*1024的，而且不能有圆角效果和透明效果！<br>2&gt; 点击编辑，设置分级，需要根据app的实际情况来设置<br>3&gt; 版权，app的所有者和获利时间<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">11. App 审核信息</div><div class="line">	![](image/52.png)</div></pre></td></tr></table></figure></p>
+<pre><code>注意: 审核信息，必须填写
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">12. 设置版本发布选项，本例选择的是手动发布</div><div class="line">	![](image/53.png)</div><div class="line">13. 提交构建版本，打开Xcode，上传应用程序包</div><div class="line">	![](image/54.png)</div><div class="line">	![](image/55.png)</div><div class="line">14. 等上几分钟</div><div class="line">	![](image/56.png)</div></pre></td></tr></table></figure>
+</code></pre><p>有两种方式:<br>1&gt; Xcode 6或更高版本<br>2&gt; Application Loader 3.0或更高版本提交构建版本<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">15. 回到 iTunes Connect网页，选择构建版本</div><div class="line">	![](image/57.png)</div><div class="line">16. 点击提交以供审核</div><div class="line">	![](image/58.png)</div></pre></td></tr></table></figure></p>
+<p>1&gt; 出口合规信息: 如果使用了加密，选择『是』，否则选『否』<br>2&gt; 内容版权: 包含了第三方的东西，就选『是』，否则选『否』<br>3&gt; 广告标识符（IDFA）: 这个一定要选对，选错了会导致二进制文件永久被拒，需要重新提交二进制文件。<br>    ```</p>
+<ol>
+<li>点击提交<br><img src="image/59.png" alt=""><br>到此，整个 App 上架流程就演示完了！</li>
+</ol>
+
+  </section>
+
+</article>
+<section class="read-more">
+           
+    
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2016/09/04/SQLite部分指令记录/" title=""></a></h2>
+                <p class="excerpt">
+                
+                SQLite部分指令记录这里只是对SQL最基本最常用的语句进行记录，以保证平时用到的时候能够快速的查看并使用基本语句，至于更多的内容可以查看其它资料进一步学习。
+
+创建一张表CREATE TABLE IF NOT EXISTS t_student(id integer PRIMARY KEY, na
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2016-09-04T13:29:01.000Z" class="post-list__meta--date date">2016-09-04</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/04/SQLite部分指令记录/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+            
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Monniya</a> 创建,
+        使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">hexo-theme-new-vno</a> 主题,
+        修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+</footer>
+        </div>
+    </div>
+
+    
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    
+    </script>
+    
+</body>
+</html>

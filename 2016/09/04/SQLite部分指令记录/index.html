@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    <title>KongKeep | 做好现在 不惧未来</title>
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="iOS小白一枚 坚持就是捷径">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="KongKeep | 做好现在 不惧未来">
+    <meta name="twitter:description" content="iOS小白一枚 坚持就是捷径">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="KongKeep | 做好现在 不惧未来">
+    <meta property="og:description" content="iOS小白一枚 坚持就是捷径">
+
+    
+    <meta name="author" content="林守哲">
+    
+    <link rel="stylesheet" href="/css/vno.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+
+    
+
+    <meta name="generator" content="hexo"/>
+    
+
+    <link rel="canonical" href="https://yoursite.com/2016/09/04/SQLite部分指令记录/"/>
+
+    
+      
+</head>
+
+<body class="home-template no-js">
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+<header class="panel-cover panel-cover--collapsed" style="background-image: url(/images/background-cover.jpg)">
+  <div class="panel-main">
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/" title="前往 KongKeep 的主页"><img src="/images/icon.jpg" width="80" alt="KongKeep logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage for KongKeep">KongKeep</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">做好现在 不惧未来</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">iOS小白一枚 坚持就是捷径</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+          <div>
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="访问博客" class="blog-button">博客</a></li>
+            
+              <li class="navigation__item"><a href="/favourite">小世界</a></li>
+            
+            </ul>
+          </nav>
+          </div>
+          <div>
+          <nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  <!-- Weibo-->
+  
+  <li class="navigation__item">
+    <a href="http://weibo.com/KongKeep" title="我的微博" target="_blank">
+      <i class='social fa fa-weibo'></i>
+      <span class="label">Weibo</span>
+    </a>
+  </li> 
+
+
+  <!-- Github -->
+  
+  <li class="navigation__item">
+    <a href="https://github.com/KongKeep" title="查看我的GitHub主页" target="_blank">
+      <i class='social fa fa-github'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+
+<!-- Stack Overflow -->
+        
+
+  <!-- Google Plus -->
+  
+
+<!-- Facebook -->
+
+  
+<!-- Twitter -->
+
+  
+
+
+
+  </ul>
+</nav>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay cover-disabled"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single">
+
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2016-09-04T13:29:01.000Z" class="post-list__meta--date date">2016-09-04</time> &#8226; <span class="post-meta__tags tags">于&nbsp; </span>
+      <span class="page-pv">
+      &nbsp;阅读&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
+      </span> 
+   
+    </div>
+    <h1 class="post-title"></h1>
+  </header>
+
+  <section class="post">
+    <h2 id="SQLite部分指令记录"><a href="#SQLite部分指令记录" class="headerlink" title="SQLite部分指令记录"></a>SQLite部分指令记录</h2><p><strong>这里只是对SQL最基本最常用的语句进行记录，以保证平时用到的时候能够快速的查看并使用基本语句，至于更多的内容可以查看其它资料进一步学习。</strong></p>
+<p><img src="语句种类.png&quot;" alt="SQL语句种类"></p>
+<h2 id="创建一张表"><a href="#创建一张表" class="headerlink" title="创建一张表"></a>创建一张表</h2><pre><code>CREATE TABLE IF NOT EXISTS t_student(id integer PRIMARY KEY, name text NOT NULL, age integer); 
+    其中t_student是表的名称
+</code></pre><p>###表中字段的类型<br><img src="属性类型.png" alt="字段类型值"></p>
+<h2 id="删除一张表"><a href="#删除一张表" class="headerlink" title="删除一张表"></a>删除一张表</h2><pre><code>drop table t_student;
+其中t_student是表名，这个语句是将整个表进行删除。
+</code></pre><p>####另一种格式</p>
+<pre><code>drop table if exists t_student;
+这种进行了容错的存在的判断，更加合理。
+</code></pre><h2 id="向表中插入数据"><a href="#向表中插入数据" class="headerlink" title="向表中插入数据"></a>向表中插入数据</h2><pre><code>INSERT INTO t_student(id , name) VALUE(1 , &apos;jack&apos;);
+其中id和name都是字段名，然后1和jack是对应字段的值,其中字符串应该以&apos;&apos;括住。
+</code></pre><h2 id="更新表中的数据（修改表中的数据）"><a href="#更新表中的数据（修改表中的数据）" class="headerlink" title="更新表中的数据（修改表中的数据）"></a>更新表中的数据（修改表中的数据）</h2><pre><code>UPDATE t_student SET id=2 , name=&apos;lily&apos;;
+这里会将表中所有的id都改为2，所有的name都改为lily,这里可以配合where对特定的记录进行修改。
+</code></pre><h2 id="删除表中的数据"><a href="#删除表中的数据" class="headerlink" title="删除表中的数据"></a>删除表中的数据</h2><pre><code>DELETE FROM t_student;
+这里会将表中的所有记录（所有行）数据都进行删除，这里可以配合where条件对特定数据进行删除操作。
+</code></pre><h2 id="条件语句的使用"><a href="#条件语句的使用" class="headerlink" title="条件语句的使用"></a>条件语句的使用</h2><p><img src="条件语句语法.png" alt="条件语句语法"></p>
+<p>####示例</p>
+<pre><code>UPDATE t_student SET age = 30 where name = &apos;lily&apos;;
+</code></pre><h2 id="查询表中指定的记录"><a href="#查询表中指定的记录" class="headerlink" title="查询表中指定的记录"></a>查询表中指定的记录</h2><pre><code>SELECT id , name FROM t_student;
+从表中查询出所有的id 和name 字段的内容
+
+SELECT * FROM t_student;
+从表中查询所有的字段内容。
+
+SELECT id FROM t_student WHERE name=&apos;lily&apos;;
+查询表中名字为lily的id属性值。
+</code></pre><h2 id="对查询以后的结果进行排序"><a href="#对查询以后的结果进行排序" class="headerlink" title="对查询以后的结果进行排序"></a>对查询以后的结果进行排序</h2><pre><code>SELECT * FROM t_student ORDER BY age desc;
+这里的desc表示降序排序，也可以使用asc进行升序排序。
+</code></pre><h2 id="精确控制查询结果的数量"><a href="#精确控制查询结果的数量" class="headerlink" title="精确控制查询结果的数量"></a>精确控制查询结果的数量</h2><pre><code>SELECT * FROM t_student LIMIT 5 , 5;
+表示在查询后的结果中从第六条记录开始，记录总长度为5个数量的recoder。
+</code></pre>
+  </section>
+
+</article>
+<section class="read-more">
+           
+    
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">最近的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2016/09/11/App上架流程--林守哲/" title=""></a></h2>
+                <p class="excerpt">
+                
+                #APP上架流程
+KeepKong Write
+
+##这个应该是比较新的上架流程，都是自己从网站上参考下来的，自己不好弄这个，所以就参考了别人写的，虽然里面有些步骤不是很明白，不过为了以后自己遇到能够有个参考，所以记下来。
+##一、在电脑上创建一个证书请求文件（签名证书）
+
+对准备好的项目设置好启动
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2016-09-11T11:11:11.000Z" class="post-list__meta--date date">2016-09-11</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/11/App上架流程--林守哲/">继续阅读</a></div>
+                           
+            </div>
+        
+        
+               
+            <div class="read-more-item">
+                <span class="read-more-item-dim">更早的文章</span>
+                <h2 class="post-list__post-title post-title"><a href="/2016/09/02/css选择器种类/" title=""></a></h2>
+                <p class="excerpt">
+                
+                CSS选择器的种类
+标签选择器
+类选择器
+id选择器
+并列选择器
+复合选择器
+后代选择器
+直接后代选择器
+相邻兄弟选择器
+属性选择器
+
+##标签选择器  
+如果存在&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;的标签，可以通过在&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;中通过div{}设
+                &hellip;
+                </p>
+                <div class="post-list__meta"><time datetime="2016-09-02T08:12:02.000Z" class="post-list__meta--date date">2016-09-02</time> &#8226; <span class="post-list__meta--tags tags">于&nbsp;</span><a class="btn-border-small" href="/2016/09/02/css选择器种类/">继续阅读</a></div>
+                       
+            </div>
+        
+     
+   
+   
+  
+</section>
+
+            
+            <footer class="footer">
+    <span class="footer__copyright">
+        本站点采用 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    </span>
+    <span class="footer__copyright">
+        基于 <a href="http://hexo.io">Hexo</a> 搭建，感谢 <a href="https://pages.github.com/">GitHub Pages</a> 提供免费的托管服务
+    </span>
+    <span class="footer__copyright">
+        &copy; 2016 - 本站由 <a href="/">@Monniya</a> 创建,
+        使用 <a href="https://github.com/monniya/hexo-theme-new-vno ">hexo-theme-new-vno</a> 主题,
+        修改自 <a href="https://github.com/lenbo-ma/hexo-theme-vno" target="_blank">Vno</a>, 原创出自<a href="http://github.com/onevcat/vno" target="_blank">onevcat</a>
+    </span>
+</footer>
+        </div>
+    </div>
+
+    
+
+     
+    
+
+
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    
+    </script>
+    
+</body>
+</html>
